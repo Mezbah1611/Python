@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9049505d-40fc-4f78-85c9-a21bf3235d2c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Lab 01 Assignment.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Add Two Matrix.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Add two List.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/All prime number at interval.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Append Element in the list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Area of Tringle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Arithmatic Operation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Armstrong Number.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Calculate the power of a number.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Celcious to Farenheight.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Check Numberr positive,negative of zero.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Compare two list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Concatenate to Strings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Connvert list to String.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convert List to Dictionary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convert List to Set.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convert List to String.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convert int to String.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Convert the String into lowercase to uppercase and uppercase to lowercase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Display Calander.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Display Fibonacci Series.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Factorial Using Recursion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Factorial of a number.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fibonacci Series.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Find Ascii Value of a Character.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Find HCF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Find LCM.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Find the Occurrences of a substring within string.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generate a Random String.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Genrate Random Number.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hello World.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kilometer to Mile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeapYear.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Multiplication Table.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Multiply two Matrix.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Number System Conversion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Odd or Even.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prime Number.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Quadratic Equation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Remove Duplicates From List.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Remove Punction From String.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Remove an Element from List.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reverse of a String.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Calculator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sort Words in Alphabatic Order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/String is a Palindrome or not.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sum of first ten natural number.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sum of natural number.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Swap two variable.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transpose of a Matrix.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2m8fFUgfRxmLlQODxHSGAwnEu58" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Add Two Matrix.executor": "Run",
+    "Python.Area of Tringle.executor": "Run",
+    "Python.Arithmatic Operation.executor": "Run",
+    "Python.Compare two list.executor": "Run",
+    "Python.Display Fibonacci Series.executor": "Run",
+    "Python.Factorial Using Recursion.executor": "Run",
+    "Python.Factorial of a number.executor": "Run",
+    "Python.Fibonacci Series.executor": "Run",
+    "Python.Find Ascii Value of a Character.executor": "Run",
+    "Python.Find LCM.executor": "Run",
+    "Python.Hello World.executor": "Run",
+    "Python.Multiplication Table.executor": "Run",
+    "Python.Number System Conversion.executor": "Run",
+    "Python.Quadratic Equation.executor": "Run",
+    "Python.Simple Calculator.executor": "Run",
+    "Python.Sum of first ten natural number.executor": "Run",
+    "Python.Sum of natural number.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9049505d-40fc-4f78-85c9-a21bf3235d2c" name="Changes" comment="" />
+      <created>1726463019525</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726463019525</updated>
+    </task>
+    <servers />
+  </component>
+</project>
