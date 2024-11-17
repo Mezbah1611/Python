@@ -8,7 +8,7 @@ class LibraryBook:
 
     def get_ISBN(self):
         
-        return f"***-{self.__isbn[-4:]}"
+        return self.__isbn
 
     def _display_basic_info(self):
         
