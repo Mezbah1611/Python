@@ -1,0 +1,35 @@
+Task Name : Exploratory Data
+Analysis using Python
+
+
+
+Task Overview:
+In this group work project, you will perform exploratory data analysis (EDA) on a given dataset
+using Python. You will apply various statistical techniques and hypothesis testing methods to
+analyze the dataset and draw meaningful insights. Each person in the group is responsible for
+one task.
+
+
+Tasks:
+1. Outlier Detection using IQR method or Z-Score method
+   ○ Detect outliers using either the Interquartile Range (IQR) method or the Z-Score
+       method.
+    ○ Visualize the distribution of data and identify outliers through plots (e.g., box
+       plots, scatter plots).
+2. Correlation Finding for at least 2 Columns and Apply Regression
+    ○ Compute the correlation between at least two columns using pandas correlation
+       functions.
+    ○ Visualize the correlations using a heatmap and apply a simple regression model
+       to analyze relationships.
+3. Check for Normal, Binomial, or Poisson Distribution
+    ○ Check whether the attributes follow a Normal, Binomial, or Poisson distribution.
+    ○ Use statistical tests such as the Shapiro-Wilk test or visualizations like
+       histograms and Q-Q plots.
+4. Apply Naive Bayes on at least 3 Columns and Find the Output Column
+    ○ Implement Naive Bayes on at least three selected columns in the dataset.
+    ○ Use the prior probabilities and likelihood functions to calculate posterior
+       probabilities, interpreting the output column.
+5. Hypothesis Testing on Selected Variables
+    ○ Conduct hypothesis testing on variables of interest.
+    ○ Use appropriate tests such as the one-sample t-test, two-sample t-test, or
+       chi-square test, and interpret the results.

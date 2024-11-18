@@ -1,0 +1,14 @@
+Data Set Name : Mobile Price Clasification
+Data set Link : https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification
+
+
+Instruction : 
+
+1. Import Necessary Libraries:
+    ● Start by importing essential Python libraries like pandas, NumPy, scipy.stats,
+        matplotlib, and seaborn. These libraries will help you manipulate data, perform
+        statistical analysis, and create visualizations.
+2. Load and Explore the Dataset:
+    ● Load the dataset into a pandas DataFrame.
+    ● Use DataFrame methods to understand the dataset’s structure (e.g., number of rows
+        and columns, data types, summary statistics)
