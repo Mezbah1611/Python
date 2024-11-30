@@ -12,8 +12,8 @@ class Taxi(vehicle):
              self.__capacity = capacity
              self.__variant = variant
         
-        #def setModel(self,model):
-           #  self.__model = model
+        def setModel(self,model):
+             self.__model = model
         
         def getModel(self):
              return self.__model
