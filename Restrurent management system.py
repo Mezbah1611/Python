@@ -1,28 +1,26 @@
-import numpy as np # 1
-from abc import ABC, abstractmethod #2
+import numpy as np  # 1
+from abc import ABC, abstractmethod  # 2
 
 
 # String Methods
-def validate_name(name): #1
+def validate_name(name):  # 1
     return name.strip().title()  # Capitalizes and removes extra spaces
 
 
-# Tuple  #1
+# Tuple  # 1
 MENU_FIELDS = ("ID", "Name", "Price", "Availability")
 
 
-class MenuItem: #1
+class MenuItem:  # 1
     def __init__(self, item_id, name, price, availability):
         self.__item_id = item_id  # Private variable
         self.__name = validate_name(name)  # String methods
         self.__price = price
         self.__availability = availability
 
-    
     def __format_info(self):
         return f"{self.__item_id}: {self.__name} - ${self.__price:.2f}"
 
-    
     def display_info(self):
         status = "Available" if self.__availability else "Unavailable"
         return f"{self.__format_info()} ({status})"
@@ -37,17 +35,16 @@ class MenuItem: #1
         return self.__name
 
 
-# Lambda Function #1
+# Lambda Function  # 1
 is_available = lambda item: item.is_available()
 
-# Numpyn  #1
+# NumPy  # 1
 def calculate_average_price(menu_items):
     prices = [item.get_price() for item in menu_items]
     return np.mean(prices) if prices else 0
 
 
-
-# Abstract B #2
+# Abstract Base Class  # 2
 class Person(ABC):
     def __init__(self, name):
         self.__name = validate_name(name)  # Private variable
@@ -60,41 +57,38 @@ class Person(ABC):
         return self.__name
 
 
-
-
-
-
-class Customer(Person): #2
+class Customer(Person):  # Updated to handle quantities in orders
     def __init__(self, name):
-        super().__init__(name)  
-        self.orders = []  
-    def place_order(self, item):
+        super().__init__(name)
+        self.orders = []  # Orders will be a list of (item, quantity) tuples
+
+    def place_order(self, item, quantity):
         if item.is_available():
-            self.orders.append(item)  
-            print(f"{self.get_name()} ordered {item.get_name()}.")
+            self.orders.append((item, quantity))
+            print(f"{self.get_name()} ordered {quantity} x {item.get_name()}.")
         else:
             print(f"Sorry, {item.get_name()} is unavailable!")
 
     def get_bill(self):
-        return sum(item.get_price() for item in self.orders)
+        # Calculate total by considering item price and quantity
+        return sum(item.get_price() * quantity for item, quantity in self.orders)
 
     def display_info(self):
         return f"Customer: {self.get_name()}, Orders: {len(self.orders)}, Total Bill: ${self.get_bill():.2f}"
 
 
-
-class VipCustomer(Customer): #2
+class VipCustomer(Customer):  # Updated to handle quantities in orders
     def get_bill(self):
-        return super().get_bill() * 0.9  
+        # Apply a 10% discount for VIP customers
+        return super().get_bill() * 0.9
 
     def display_info(self):
         return f"VIP Customer: {self.get_name()}, Orders: {len(self.orders)}, Total Bill (after discount): ${self.get_bill():.2f}"
 
 
-
-class Employee(Person): #2
+class Employee(Person):  # 2
     def __init__(self, employee_id, name, role):
-        super().__init__(name) 
+        super().__init__(name)
         self.employee_id = employee_id
         self.role = role
 
@@ -102,11 +96,7 @@ class Employee(Person): #2
         return f"Employee ID: {self.employee_id}, Name: {self.get_name()}, Role: {self.role}"
 
 
-
-
-
-
-def safe_input(prompt, input_type): #2
+def safe_input(prompt, input_type):  # 2
     while True:
         try:
             return input_type(input(prompt))
@@ -114,11 +104,10 @@ def safe_input(prompt, input_type): #2
             print(f"Invalid input! Please enter a valid {input_type.__name__}.")
 
 
-
-class Manager(Employee, Customer):  
+class Manager(Employee, Customer):
     def __init__(self, employee_id, name, role):
         Employee.__init__(self, employee_id, name, role)
-        Customer.__init__(self, name) 
+        Customer.__init__(self, name)
 
     def approve_discount(self, customer):
         if isinstance(customer, VipCustomer):
@@ -127,12 +116,7 @@ class Manager(Employee, Customer):
             print(f"{self.get_name()} does not provide discounts for regular customers.")
 
 
-
-
-
-
-
-# Dictionary 
+# Dictionary
 restaurant = {
     "menu": [],
     "customers": [],
@@ -140,8 +124,7 @@ restaurant = {
 }
 
 
-
-def add_menu_item():  #1
+def add_menu_item():  # 1
     item_id = len(restaurant["menu"]) + 1
     name = input("Enter item name: ")
     price = safe_input("Enter item price: ", float)
@@ -149,7 +132,8 @@ def add_menu_item():  #1
     restaurant["menu"].append(MenuItem(item_id, name, price, availability))
     print("Menu item added successfully!")
 
-def view_menu(): #1
+
+def view_menu():  # 1
     if not restaurant["menu"]:
         print("No items on the menu!")
         return
@@ -158,7 +142,7 @@ def view_menu(): #1
         print(item.display_info())
 
 
-def add_customer(): #2
+def add_customer():  # 2
     name = input("Enter customer name: ")
     role = input("Enter customer type (regular/vip): ").strip().lower()
     if role == "regular":
@@ -170,13 +154,14 @@ def add_customer(): #2
         return
     print(f"{name} added as a {role} customer.")
 
-def view_customers(): #2
+
+def view_customers():  # 2
     if not restaurant["customers"]:
         print("No customers yet!")
         return
     print("\n--- Customers ---")
-    for customer in restaurant["customers"]:
-        print(customer.display_info())
+    for i, customer in enumerate(restaurant["customers"]):
+        print(f"{i}: {customer.display_info()}")
 
 
 def add_employee():
@@ -200,20 +185,39 @@ def view_employees():
 
 
 def place_order():
+    # Step 1: Display the menu to the user
     view_menu()
+
+    # Step 2: Ask the user to select a menu item by entering its ID
     item_id = safe_input("Enter the menu item ID to order: ", int)
+
+    # Step 3: Display the list of customers
     view_customers()
+
+    # Step 4: Ask the user to select a customer by entering their index
     customer_id = safe_input("Enter customer index: ", int)
+
+    # Step 5: Validate the item ID and customer index
     if 0 < item_id <= len(restaurant["menu"]) and 0 <= customer_id < len(restaurant["customers"]):
-        restaurant["customers"][customer_id].place_order(restaurant["menu"][item_id - 1])
+        # Step 6: Ask for the quantity of the selected item
+        quantity = safe_input("Enter the quantity: ", int)
+
+        if quantity <= 0:
+            print("Quantity must be at least 1.")
+            return
+
+        # Step 7: Place the order
+        selected_item = restaurant["menu"][item_id - 1]
+        selected_customer = restaurant["customers"][customer_id]
+        selected_customer.place_order(selected_item, quantity)
     else:
+        # Step 8: Inform the user if the input is invalid
         print("Invalid menu item or customer selection!")
 
 
 def calculate_total_revenue():
     total_revenue = sum(customer.get_bill() for customer in restaurant["customers"])
     print(f"Total Revenue: ${total_revenue:.2f}")
-
 
 
 def restaurant_menu():
@@ -250,11 +254,10 @@ def restaurant_menu():
             calculate_total_revenue()
         elif choice == "10":
             print("Exiting the restaurant system. Goodbye!")
-            break  # Exit the loop
+            break
         else:
             print("Invalid choice! Please try again.")
             continue
-
 
 
 if __name__ == "__main__":
