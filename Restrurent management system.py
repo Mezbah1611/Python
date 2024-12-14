@@ -100,7 +100,7 @@ class Employee(Person):
         return f"Employee ID: {self.employee_id}, Name: {self.get_name()}, Role: {self.role}"
 
 
-class Manager(Employee):
+class Manager(Employee,Person):
     def __init__(self, employee_id, name, role):
         super().__init__(employee_id, name, role)
 
@@ -207,26 +207,20 @@ def view_employees():
 def place_order():
     view_menu()
     item_id = safe_input("Enter the menu item ID to order: ", int)
-    view_customers()
-    
-    
-    customer_id = safe_input("Enter customer index (or enter -1 for new customer): ", int)
-    
+    view_customers() 
+    customer_id = safe_input("Enter customer index (or enter -1 for new customer): ", int)  
     if customer_id == -1:  
         name = input("Enter customer name: ")
         phone = input("Enter customer phone number: ")
         address = input("Enter customer address: ")
-        role = input("Enter customer type (regular/vip): ").strip().lower()
-        
+        role = input("Enter customer type (regular/vip): ").strip().lower()       
         if role == "regular":
             new_customer = Customer(name, phone, address)
         elif role == "vip":
             new_customer = VipCustomer(name, phone, address)
         else:
             print("Invalid customer type! Defaulting to regular.")
-            new_customer = Customer(name, phone, address)
-        
-       
+            new_customer = Customer(name, phone, address)      
         restaurant["customers"].append(new_customer)
         customer_id = len(restaurant["customers"]) - 1  
         print(f"New customer {name} added as a {role} customer.")
@@ -236,14 +230,12 @@ def place_order():
     else:
         print("Invalid customer selection!")
         return
-
     if 0 < item_id <= len(restaurant["menu"]):  
         quantity = safe_input("Enter the quantity: ", int)
         delivery_option = input("Do you want delivery? (yes/no): ").strip().lower()
         delivery_option = "Delivery" if delivery_option == "yes" else "Pickup"
         payment_method = input("Payment method (cash/online banking): ").strip().lower()
         amount_paid = safe_input("Enter the amount paid: ", float)
-
         selected_item = restaurant["menu"][item_id - 1]
         selected_customer.place_order(selected_item, quantity, delivery_option, payment_method, amount_paid)
     else:
@@ -293,12 +285,10 @@ def restaurant_menu():
         print("4. View Menu")
         print("5. View Customers")
         print("6. View Employees")
-        print("7. Place Order")
-        
+        print("7. Place Order")        
         print("8. Calculate Total Revenue")
         print("9. View Order Details")  # New option for order details
         print("10. Exit")
-
         choice = input("Enter your choice: ").strip()
         if choice == "1":
             add_menu_item()
@@ -313,8 +303,7 @@ def restaurant_menu():
         elif choice == "6":
             view_employees()
         elif choice == "7":
-            place_order()
-        
+            place_order()       
         elif choice == "8":
             calculate_total_revenue()
         elif choice == "9":
