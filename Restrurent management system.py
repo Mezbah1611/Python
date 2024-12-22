@@ -52,7 +52,6 @@ class Person(ABC):
     def get_name(self):
         return self.__name
 
-
 class Customer(Person):
     def __init__(self, name, phone, address):
         super().__init__(name)
